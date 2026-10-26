@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Datenschutzerklärung – Ludwig DUO-Sync</title>
+<style>
+  body { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; max-width: 760px; margin: 32px auto; padding: 0 16px; line-height: 1.55; color: #1a1a1a; }
+  h1 { font-size: 1.6rem; } h2 { font-size: 1.2rem; margin-top: 2rem; }
+  table { border-collapse: collapse; width: 100%; font-size: .92rem; }
+  th, td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; vertical-align: top; }
+  th { background: #f5f5f5; }
+  .stand { color: #555; font-size: .9rem; }
+</style>
+</head>
+<body>
+<h1>Datenschutzerklärung für die Browser-Erweiterung „Ludwig DUO-Sync“</h1>
+<p class="stand">Stand: 26.10.2026 · Erweiterung ab Version 0.8.0</p>
+
+<h2>1. Verantwortlicher</h2>
+<p>
+Mathias Bauer Beratungs-GmbH<br>
+Wittelsbacherstraße 1<br>
+85622 Feldkirchen<br>
+Registergericht: Amtsgericht München, HRB 283570<br>
+Geschäftsführerin: Eva Streese<br>
+E-Mail: mathias@mb-beratung.gmbh
+</p>
+
+<h2>2. Wofür die Erweiterung da ist</h2>
+<p>Ludwig DUO-Sync überträgt auf Knopfdruck Belege und Kontoumsätze eines Mandanten aus DATEV Unternehmen Online in die Ludwig-Instanz Ihrer Kanzlei und sortiert in Ludwig gebuchte Belege in die DUO-Belegablage ein. Jeder Lauf wird von Ihnen gestartet; die Erweiterung arbeitet nicht im Hintergrund.</p>
+
+<h2>3. Welche Daten verarbeitet werden</h2>
+<ul>
+  <li><strong>Inhalte aus DATEV Unternehmen Online:</strong> Beleglisten, Belegdateien und Kontoumsätze des gewählten Mandanten. Sie enthalten je nach Mandant Namen, Anschriften, Bankverbindungen, Rechnungs- und Kontodaten.</li>
+  <li><strong>Zugangsdaten:</strong> Ihre DATEV-Zugangsdaten sieht und speichert die Erweiterung nicht; die Anmeldung bei DATEV erfolgt immer durch Sie selbst. Für Ludwig wird ein persönliches Zugriffstoken gespeichert (Anmeldung über „Mit Ludwig verbinden“).</li>
+  <li><strong>Lokale Daten im Browser:</strong> Einstellungen, das Ludwig-Token, die zuletzt gültige Fernkonfiguration und ein Protokoll der letzten Läufe (höchstens 25 Läufe, längstens 90 Tage). Diese Daten liegen ausschließlich in Ihrem Browser (<code>chrome.storage.local</code>) und werden nicht auf andere Geräte synchronisiert. Sie können das Protokoll in der Erweiterung jederzeit löschen.</li>
+  <li><strong>Exportdateien:</strong> Von DATEV exportierte CSV-Dateien liest die Erweiterung aus dem Download-Ordner und löscht sie danach wieder.</li>
+</ul>
+
+<h2>4. Wohin die Daten gehen</h2>
+<p>Die Daten werden ausschließlich an die Ludwig-Instanz Ihrer Kanzlei übertragen. Belegdateien werden über ein kurzlebiges Upload-Ticket direkt an die darin genannte Speicheradresse (Microsoft Azure Blob Storage) gesendet. Es gibt keine Werbung, kein Tracking, keine Analyse-Dienste und keine Weitergabe an Dritte. Die Kanzlei hat den Ludwig-Betreiber als Auftragsverarbeiter beauftragt.</p>
+
+<h2>5. Fehlermeldungen an den Anbieter</h2>
+<p>Bricht ein Lauf ab oder schlagen einzelne Übertragungen fehl, sendet die Erweiterung eine technische Fehlermeldung an einen vom Anbieter selbst betriebenen Fehlerserver (kein Cloud-Dienst eines Dritten). Erfolgreiche Läufe werden nicht gemeldet. Die Meldung enthält ausschließlich:</p>
+<table>
+  <tr><th>Angabe</th><th>Inhalt</th></tr>
+  <tr><td>Technik</td><td>Plugin-Version, Umgebung, Zeitpunkt, Zufallskennung, Art und Schritt des Fehlers, ggf. Fehlercode und HTTP-Status der Ludwig-Schnittstelle, Stand der Fernkonfiguration, Laufdauer, gewählte Schritte</td></tr>
+  <tr><td>Pseudonym</td><td>Interne Ludwig-Mandanten-ID (nur in Ludwig einem Mandanten zuordenbar; kein Name, keine DATEV-Nummer)</td></tr>
+  <tr><td>Fehlertext</td><td>Nach Bereinigung (Namen, Nummern, Beträge, IBANs, Dateinamen, Datumsangaben, E-Mail-Adressen werden ersetzt), höchstens 500 Zeichen</td></tr>
+  <tr><td>Fehler je Beleg/Konto</td><td>Nur Anzahlen je Art, keine Texte oder Kennungen</td></tr>
+  <tr><td>Code-Position</td><td>Datei, Funktion und Zeile im Programmcode der Erweiterung</td></tr>
+</table>
+<p>Nie gesendet werden: Mandantennamen, DATEV-Mandanten- und Beraternummern, Beleg-IDs, Dateinamen, Namen von Geschäftspartnern, Rechnungsnummern, Ablagepfade, IBANs, Beträge, Kontostände, Inhalte des Lauf-Protokolls und das Ludwig-Token. Technisch bedingt erhält der Server mit jeder Anfrage die IP-Adresse und den User-Agent des Rechners. Die Fehlermeldungen lassen sich in den Einstellungen der Erweiterung ausschalten.</p>
+<p>Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an fehlerfreiem Betrieb) bzw. Auftragsverarbeitung für die Kanzlei. Die Meldungen werden nur so lange aufbewahrt, wie es für die Fehlerbehebung nötig ist.</p>
+
+<h2>6. Berechtigungen der Erweiterung</h2>
+<p>Die Erweiterung verlangt <em>storage</em> (Einstellungen und Protokoll speichern), <em>tabs</em> und <em>webNavigation</em> (eigenen DATEV-Tab bedienen), <em>downloads</em> (Export-Dateien finden und danach löschen), <em>identity</em> (Anmeldung bei Ludwig) sowie Zugriff auf die DATEV-Seiten, die Ludwig-Schnittstelle, die vom Ludwig-Server genannte Upload-Adresse und lokale Dateien (nur der selbst ausgelöste Export). Die Erweiterung lädt keinen Programmcode nach.</p>
+
+<h2>7. Ihre Rechte</h2>
+<p>Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch (Art. 15–21 DSGVO). Wenden Sie sich dazu an die oben genannte Adresse. Zudem können Sie sich bei einer Datenschutz-Aufsichtsbehörde beschweren, in Bayern beim Bayerischen Landesamt für Datenschutzaufsicht (BayLDA), Promenade 18, 91522 Ansbach.</p>
+
+<h2>8. Änderungen</h2>
+<p>Wir passen diese Erklärung an, wenn sich die Erweiterung ändert. Maßgeblich ist die jeweils hier veröffentlichte Fassung.</p>
+</body>
+</html>
