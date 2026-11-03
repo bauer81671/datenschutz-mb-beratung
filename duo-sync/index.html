@@ -15,7 +15,7 @@
 </head>
 <body>
 <h1>Datenschutzerklärung für die Browser-Erweiterung „Ludwig DUO-Sync“</h1>
-<p class="stand">Stand: 26.10.2026 · Erweiterung ab Version 0.8.0</p>
+<p class="stand">Stand: 03.11.2026 · Erweiterung ab Version 0.9.0</p>
 
 <h2>1. Verantwortlicher</h2>
 <p>
@@ -33,8 +33,9 @@ E-Mail: mathias@mb-beratung.gmbh
 <h2>3. Welche Daten verarbeitet werden</h2>
 <ul>
   <li><strong>Inhalte aus DATEV Unternehmen Online:</strong> Beleglisten, Belegdateien und Kontoumsätze des gewählten Mandanten. Sie enthalten je nach Mandant Namen, Anschriften, Bankverbindungen, Rechnungs- und Kontodaten.</li>
+  <li><strong>Angaben zu den Belegen aus DATEV (ab Version 0.9.0):</strong> Zusätzlich zur Belegdatei überträgt die Erweiterung die Angaben, die DATEV im Belegexport zum Beleg führt: Kostenstellen (KOST 1 und KOST 2), die Notiz (Freitext), den Status „gebucht“, „bezahlt“ und „freigegeben“ mit Datum sowie den Rechnungskopf (Rechnungsnummer, Rechnungs- und Leistungsdatum, Rechnungsbetrag und Währung, Steuersatz, Name, USt-IdNr., IBAN, BIC und Kundennummer des Geschäftspartners, Buchungstext, Konto, Gegenkonto und BU-Schlüssel). Ebenso die Belegart (Rechnung oder Gutschrift), den Belegtyp und den Belegkreis. Diese Angaben können personenbezogene Daten und Finanzdaten enthalten und gehen nur an die Ludwig-Instanz Ihrer Kanzlei.</li>
   <li><strong>Zugangsdaten:</strong> Ihre DATEV-Zugangsdaten sieht und speichert die Erweiterung nicht; die Anmeldung bei DATEV erfolgt immer durch Sie selbst. Für Ludwig wird ein persönliches Zugriffstoken gespeichert (Anmeldung über „Mit Ludwig verbinden“).</li>
-  <li><strong>Lokale Daten im Browser:</strong> Einstellungen, das Ludwig-Token, die zuletzt gültige Fernkonfiguration und ein Protokoll der letzten Läufe (höchstens 25 Läufe, längstens 90 Tage). Diese Daten liegen ausschließlich in Ihrem Browser (<code>chrome.storage.local</code>) und werden nicht auf andere Geräte synchronisiert. Sie können das Protokoll in der Erweiterung jederzeit löschen.</li>
+  <li><strong>Lokale Daten im Browser:</strong> Einstellungen, das Ludwig-Token, die zuletzt gültige Fernkonfiguration und ein Protokoll der letzten Läufe (höchstens 25 Läufe, längstens 90 Tage). Diese Daten liegen ausschließlich in Ihrem Browser (<code>chrome.storage.local</code>) und werden nicht auf andere Geräte synchronisiert. Sie können das Protokoll in der Erweiterung jederzeit löschen. Das Protokoll hält fest, was übertragen wurde (Beleg-IDs, Dateinamen der Belege, Namen der übertragenen Felder, Ergebnisse) und woran ein Lauf scheiterte: fehlgeschlagene oder sehr langsame Anfragen der DATEV-Seite (Adresse samt Mandanten- und Beraternummer, Status), offene DATEV-Dialoge und Fehlermeldungen der Seite, bei Problemen mit der Export-Datei auch deren Speicherort. Dieses technische Protokoll bleibt ausschließlich in Ihrem Browser und wird nicht an Ludwig oder an den Anbieter gesendet.</li>
   <li><strong>Exportdateien:</strong> Von DATEV exportierte CSV-Dateien liest die Erweiterung aus dem Download-Ordner und löscht sie danach wieder.</li>
 </ul>
 
